@@ -26,8 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///Define Vars
-centerX = x// - (sprite_width / 2);
-centerY = y// - (sprite_width / 2);
+gridX = 0;
+gridY = 0;
+centerX = x;
+centerY = y;
 </string>
           </argument>
         </arguments>

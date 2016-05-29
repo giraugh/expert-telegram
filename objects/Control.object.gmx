@@ -63,7 +63,9 @@ for (var i=0;i&lt;tilesWidth;i++) {
     for (var j=0;j&lt;tilesWidth;j++) {
         var posX = tileStartX + (i*tileSep);
         var posY = tileStartY + (j*tileSep);
-        instance_create(posX,posY,Tile);
+        var tile = instance_create(posX,posY,Tile);
+        tile.gridX = i;
+        tile.gridY = j;
     }
 }
 </string>
