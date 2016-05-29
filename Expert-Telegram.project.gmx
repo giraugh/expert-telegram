@@ -10,8 +10,10 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\Tile</object>
+    <object>objects\Control</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Default</room>
