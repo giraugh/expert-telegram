@@ -145,7 +145,6 @@ if (instance_exists(Cursor)) {
             Cursor.actualY = y;
             Cursor.gridX = gridX;
             Cursor.gridY = gridY;
-            show_debug_message("MOVED TO: "+string(Cursor.gridX)+","+string(Cursor.gridY));
         }
     }
 }
