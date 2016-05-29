@@ -26,11 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>///Define Vars
+tileObj = Tile;
 tilesWidth = 10;
 tilesHeight = 10;
-tileSize = 32;
+tileSize = sprite_get_width(object_get_sprite(tileObj));
 tilePadding = 8;
 tileSep = tileSize+tilePadding;
+
+tileStartX = (room_width/2) - (tilesWidth*tileSep)/2;
+tileStartY = (room_height/2) - (tilesHeight*tileSep)/2;
 </string>
           </argument>
         </arguments>
@@ -54,7 +58,9 @@ tileSep = tileSize+tilePadding;
             <string>///Create Tiles
 for (var i=0;i&lt;tilesWidth;i++) {
     for (var j=0;j&lt;tilesWidth;j++) {
-        instance_create(i*tileSep,j*tileSep,Tile);
+        var posX = tileStartX + (i*tileSep);
+        var posY = tileStartY + (j*tileSep);
+        instance_create(posX,posY,Tile);
     }
 }
 </string>
