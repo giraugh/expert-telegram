@@ -10,7 +10,14 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
+  <scripts name="scripts">
+    <scripts name="Control">
+      <script>scripts\scr_DefineColours.gml</script>
+    </scripts>
+    <scripts name="Tile">
+      <script>scripts\scr_ChooseColour.gml</script>
+    </scripts>
+  </scripts>
   <objects name="objects">
     <object>objects\Tile</object>
     <object>objects\Control</object>

@@ -35,6 +35,9 @@ tileSep = tileSize+tilePadding;
 
 tileStartX = (room_width/2) - (tilesWidth*tileSep)/2;
 tileStartY = (room_height/2) - (tilesHeight*tileSep)/2;
+
+scr_DefineColours();
+
 </string>
           </argument>
         </arguments>
