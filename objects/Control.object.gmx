@@ -66,8 +66,8 @@ for (var i=0;i&lt;tilesWidth;i++) {
         var posX = tileStartX + (i*tileSep);
         var posY = tileStartY + (j*tileSep);
         var tile = instance_create(posX,posY,Tile);
-        tile.gridX = i;
-        tile.gridY = j;
+        tile.gridX = i+1; //Prevent Zero
+        tile.gridY = j+1; //Prevent Zero
     }
 }
 </string>

@@ -139,13 +139,13 @@ if (!instance_exists(Cursor)){
             <string>//Move Cursor
 if (instance_exists(Cursor)) {
     if (!beingSelected &amp;&amp; Cursor.colour == colour) {
-        show_debug_message(string(abs(Cursor.gridX-gridX))+":"+string(abs(Cursor.gridY-gridY)));
         if ((abs(Cursor.gridX-gridX) &lt;= 1) &amp;&amp; (abs(Cursor.gridY-gridY) &lt;= 1)){
             beingSelected = true;
             Cursor.actualX = x;
             Cursor.actualY = y;
             Cursor.gridX = gridX;
             Cursor.gridY = gridY;
+            show_debug_message("MOVED TO: "+string(Cursor.gridX)+","+string(Cursor.gridY));
         }
     }
 }
