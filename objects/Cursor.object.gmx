@@ -142,7 +142,7 @@ instance_destroy();
 var i = 0;
 draw_set_colour(c_white);
 repeat(curPosition) {
-    var size = 16;
+    var size = 20;
     var p1 = positionsX[i];
     var p2 = positionsY[i];
     var p3 = positionsX[i+1];

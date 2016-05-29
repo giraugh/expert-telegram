@@ -23,9 +23,13 @@
     <scripts name="Utility">
       <script>scripts\scr_ModifyColour.gml</script>
     </scripts>
+    <scripts name="Camera">
+      <script>scripts\scr_CameraShake.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\Control</object>
+    <object>objects\Camera</object>
     <objects name="Tile">
       <object>objects\Tile</object>
       <object>objects\FadeTile</object>
