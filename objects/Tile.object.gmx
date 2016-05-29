@@ -105,6 +105,7 @@ size = lerp(size,1,0.25);
 
 //If one doesnt exist (it shouldn't, so we throw an error if it does)
 if (!instance_exists(Cursor)){
+    show_debug_message("CREATE CURSOR");
     var cursor = instance_create(centerX,centerY,Cursor);
     cursor.colour = colour; //Share Colour
     cursor.gridX = gridX;
@@ -138,6 +139,7 @@ if (!instance_exists(Cursor)){
             <string>//Move Cursor
 if (instance_exists(Cursor)) {
     if (!beingSelected &amp;&amp; Cursor.colour == colour) {
+        show_debug_message(string(abs(Cursor.gridX-gridX))+":"+string(abs(Cursor.gridY-gridY)));
         if ((abs(Cursor.gridX-gridX) &lt;= 1) &amp;&amp; (abs(Cursor.gridY-gridY) &lt;= 1)){
             beingSelected = true;
             Cursor.actualX = x;
@@ -173,6 +175,7 @@ if (instance_exists(Cursor)) {
 image_xscale = size;
 image_yscale = size;
 image_blend = colour;
+if ((Control.gameSteps % 4 == 0) &amp;&amp; beingSelected){image_blend = c_white;}
 draw_self();
 </string>
           </argument>

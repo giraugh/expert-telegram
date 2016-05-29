@@ -3,7 +3,7 @@
   <spriteName>sCursor</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -51,7 +51,7 @@ size = 1;
             <kind>1</kind>
             <string>///Grow small &amp; Die
 
-//size = lerp(size,0,0.25);
+size = lerp(size,0,0.1);
 if (size &lt; 0.03) {
     instance_destroy();
 }

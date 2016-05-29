@@ -30,8 +30,6 @@ size = 1;
 colour = c_white;
 actualX = x;
 actualY = y;
-gridX = 0;
-gridY = 0;
 iSpeed = 0.4;
 </string>
           </argument>
