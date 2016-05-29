@@ -27,12 +27,6 @@
             <kind>1</kind>
             <string>///Init Vars
 size = 1;
-colour = c_white;
-actualX = x;
-actualY = y;
-gridX = 0;
-gridY = 0;
-iSpeed = 0.4;
 </string>
           </argument>
         </arguments>
@@ -55,62 +49,12 @@ iSpeed = 0.4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Move to Actual Pos
-x = lerp(x,actualX,iSpeed);
-y = lerp(y,actualY,iSpeed);
+            <string>///Grow small &amp; Die
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Leave Trail
-instance_create(x,y,CursorTrail);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="56">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Award points, destroy tiles &amp; destroy this
-with (Tile) {
-    if (beingSelected) {
-        scr_Die();
-    }
+//size = lerp(size,0,0.25);
+if (size &lt; 0.03) {
+    instance_destroy();
 }
-
-instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -133,8 +77,9 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw with blending
-image_blend = c_white;
+            <string>///Draw with scaling
+image_xscale = size;
+image_yscale = size;
 draw_self();
 </string>
           </argument>

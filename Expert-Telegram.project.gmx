@@ -25,10 +25,15 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\Tile</object>
     <object>objects\Control</object>
-    <object>objects\Cursor</object>
-    <object>objects\FadeTile</object>
+    <objects name="Tile">
+      <object>objects\Tile</object>
+      <object>objects\FadeTile</object>
+    </objects>
+    <objects name="Cursor">
+      <object>objects\Cursor</object>
+      <object>objects\CursorTrail</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Default</room>

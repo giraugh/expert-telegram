@@ -138,7 +138,7 @@ if (!instance_exists(Cursor)){
             <string>//Move Cursor
 if (instance_exists(Cursor)) {
     if (!beingSelected &amp;&amp; Cursor.colour == colour) {
-        if (Cursor.gridX-gridX &lt;= 1 &amp;&amp; Cursor.gridY-gridY &lt;= 1 ){
+        if ((abs(Cursor.gridX-gridX) &lt;= 1) &amp;&amp; (abs(Cursor.gridY-gridY) &lt;= 1)){
             beingSelected = true;
             Cursor.actualX = x;
             Cursor.actualY = y;
