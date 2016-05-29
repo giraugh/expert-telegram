@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="Control" x="0" y="0" name="inst_ACE7F79E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Camera" x="32" y="0" name="inst_4674016A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

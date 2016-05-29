@@ -29,6 +29,7 @@
 x = 0;
 y = 0;
 spd = 0.3;
+shake = 0;
 
 
 </string>
@@ -53,8 +54,13 @@ spd = 0.3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_xview[0] = lerp(view_xview[0],x,spd);
-view_yview[0] = lerp(view_yview[0],y,spd);
+            <string>x += random(shake*2)-shake;
+y += random(shake*2)-shake;
+shake = lerp(shake,0,0.2);
+x = lerp(x,0,spd);
+y = lerp(y,0,spd);
+view_xview[0] = x;
+view_yview[0] = y;
 </string>
           </argument>
         </arguments>

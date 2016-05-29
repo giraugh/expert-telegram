@@ -19,11 +19,13 @@
       <script>scripts\scr_ChooseColour.gml</script>
       <script>scripts\scr_UnselectAll.gml</script>
       <script>scripts\scr_Die.gml</script>
+      <script>scripts\scr_getSelectedAmount.gml</script>
     </scripts>
     <scripts name="Utility">
       <script>scripts\scr_ModifyColour.gml</script>
     </scripts>
     <scripts name="Camera">
+      <script>scripts\scr_CameraBash.gml</script>
       <script>scripts\scr_CameraShake.gml</script>
     </scripts>
   </scripts>

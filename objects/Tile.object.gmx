@@ -111,6 +111,7 @@ if (!instance_exists(Cursor)){
     cursor.gridX = gridX;
     cursor.gridY = gridY;
     beingSelected = true;
+    scr_CameraBash(8,8);
 } else {
     show_error("Error in Tile object:Multiple Cursors",true);
 }
@@ -145,6 +146,7 @@ if (instance_exists(Cursor)) {
             Cursor.actualY = y;
             Cursor.gridX = gridX;
             Cursor.gridY = gridY;
+            scr_CameraBash(8,8);
         }
     }
 }

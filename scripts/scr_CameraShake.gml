@@ -1,5 +1,4 @@
-///scr_CameraShake(h,v)
+///scr_cameraShake(amount)
 with (Camera) {
-    x += argument0;
-    y += argument1;
+    shake += argument0;
 }
