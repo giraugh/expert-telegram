@@ -30,6 +30,7 @@ x = 0;
 y = 0;
 spd = 0.3;
 shake = 0;
+exag = 2;
 
 
 </string>

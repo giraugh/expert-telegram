@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>3223857</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>window_set_colour(background_colour);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

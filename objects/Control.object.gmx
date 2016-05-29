@@ -51,14 +51,14 @@ randomize();
 gameSteps = 0; //keep track of step amount
 
 tileObj = Tile;
-tilesWidth = 10;
-tilesHeight = 10;
+tilesWidth = 6;
+tilesHeight = 6;
 tileSize = sprite_get_width(object_get_sprite(tileObj));
 tilePadding = 8;
 tileSep = tileSize+tilePadding;
 
-tileStartX = (room_width/2) - (tilesWidth*tileSep)/2;
-tileStartY = (room_height/2) - (tilesHeight*tileSep)/2;
+tileStartX = (room_width/2) - ((tilesWidth-1)*tileSep)/2;
+tileStartY = (room_height/2) - ((tilesHeight-1)*tileSep)/2;
 
 scr_DefineColours();
 

@@ -1,4 +1,4 @@
 ///scr_cameraShake(amount)
 with (Camera) {
-    shake += argument0;
+    shake += argument0*exag;
 }
