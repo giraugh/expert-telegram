@@ -18,6 +18,9 @@
     <scripts name="Tile">
       <script>scripts\scr_ChooseColour.gml</script>
     </scripts>
+    <scripts name="Utility">
+      <script>scripts\scr_ModifyColour.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\Tile</object>

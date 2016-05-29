@@ -78,6 +78,7 @@ instance_destroy();
             <kind>1</kind>
             <string>///Draw with blending
 image_blend = colour;
+if (Control.gameSteps % 5 == 0){image_blend = c_white;}
 draw_self();
 </string>
           </argument>
