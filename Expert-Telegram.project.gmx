@@ -17,6 +17,8 @@
     </scripts>
     <scripts name="Tile">
       <script>scripts\scr_ChooseColour.gml</script>
+      <script>scripts\scr_UnselectAll.gml</script>
+      <script>scripts\scr_Die.gml</script>
     </scripts>
     <scripts name="Utility">
       <script>scripts\scr_ModifyColour.gml</script>
@@ -26,6 +28,7 @@
     <object>objects\Tile</object>
     <object>objects\Control</object>
     <object>objects\Cursor</object>
+    <object>objects\FadeTile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Default</room>
