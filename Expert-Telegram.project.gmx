@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndBlip</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sTile</sprite>
     <sprite>sprites\sCursor</sprite>
@@ -27,6 +29,10 @@
     <scripts name="Camera">
       <script>scripts\scr_CameraBash.gml</script>
       <script>scripts\scr_CameraShake.gml</script>
+    </scripts>
+    <scripts name="sound">
+      <script>scripts\scr_playBlip.gml</script>
+      <script>scripts\scr_resetBlip.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

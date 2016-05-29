@@ -112,6 +112,7 @@ if (!instance_exists(Cursor)){
     cursor.gridY = gridY;
     beingSelected = true;
     scr_CameraBash(8,8);
+    scr_playBlip(1);
 } else {
     show_error("Error in Tile object:Multiple Cursors",true);
 }
@@ -147,6 +148,7 @@ if (instance_exists(Cursor)) {
             Cursor.gridX = gridX;
             Cursor.gridY = gridY;
             scr_CameraBash(8,8);
+            scr_playBlip(scr_getSelectedAmount());
         }
     }
 }
