@@ -10,6 +10,7 @@
   <sprites name="sprites">
     <sprite>sprites\sTile</sprite>
     <sprite>sprites\sCursor</sprite>
+    <sprite>sprites\sButton</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -54,7 +55,7 @@
     </objects>
     <objects name="Menu">
       <object>objects\MenuControl</object>
-      <object>objects\Buttons</object>
+      <object>objects\Button</object>
     </objects>
   </objects>
   <rooms name="rooms">
