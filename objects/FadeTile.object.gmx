@@ -59,6 +59,7 @@ if (size &lt; 0.03) {
     var tile = instance_create(x,y,Tile);
     tile.gridX = gridX;
     tile.gridY = gridY;
+    tile.written = true;
     instance_destroy();
 }
 </string>

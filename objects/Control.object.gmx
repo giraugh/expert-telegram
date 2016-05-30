@@ -57,6 +57,12 @@ tileSize = sprite_get_width(object_get_sprite(tileObj));
 tilePadding = 8;
 tileSep = tileSize+tilePadding;
 
+potentialTimer = 0;
+potentialScore = 0;
+
+timerMax = 20;
+timer = 20;
+
 tileStartX = (room_width/2) - ((tilesWidth-1)*tileSep)/2;
 tileStartY = (room_height/2) - ((tilesHeight-1)*tileSep)/2;
 
@@ -97,6 +103,30 @@ for (var i=0;i&lt;tilesWidth;i++) {
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Lost Game
+game_restart();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -116,6 +146,131 @@ for (var i=0;i&lt;tilesWidth;i++) {
             <kind>1</kind>
             <string>///Increase GameSteps
 gameSteps++;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///reduce timer
+timer -= 1/room_speed;
+if (timer &lt;= 0) {
+    if (alarm[0] == 0 || alarm[0] == -1) {
+        scr_CameraShake(150);
+        alarm[0] = room_speed * 1.5;
+        timer = 0;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Calculate Potentials
+potentialScore = scr_GetScore();
+potentialTime = scr_GetTime();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw timer
+var width = 16;
+var offset = 15;
+var height = (tileSep*tilesHeight);
+var oOffset = 2;
+var flash = 16;
+var flashStart = 0.25;
+
+var per = max(0,timer/timerMax)
+var xx = tileStartX+(tileSep*tilesWidth)+offset;
+var yy = tileStartY - tileSize/2;
+
+draw_set_colour(make_color_rgb(70,70,70));
+draw_rectangle(xx+oOffset, yy+oOffset, xx+width-oOffset, yy+height-oOffset,false);
+draw_set_colour(c_white);
+if (per &lt; flashStart &amp;&amp; gameSteps % flash &lt; flash/2){draw_set_colour(c_red);}
+draw_rectangle(xx, yy+(height*(1-per)), xx+width, yy+height,false);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw score
+var offsetX = 60;
+var offsetY = 70;
+
+var xx = tileStartX-offset;
+var yy = tileStartY-offsetY - (tileSize/2);
+
+draw_set_font(fntDefault);
+if (potentialScore != 0) {
+    draw_text(xx,yy,string(score) + " + " + string(potentialScore));
+}
+else {
+    draw_text(xx,yy,string(score));
+}
 </string>
           </argument>
         </arguments>

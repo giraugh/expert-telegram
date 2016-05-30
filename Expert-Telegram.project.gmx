@@ -16,6 +16,9 @@
   <scripts name="scripts">
     <scripts name="Control">
       <script>scripts\scr_DefineColours.gml</script>
+      <script>scripts\scr_AwardTime.gml</script>
+      <script>scripts\scr_GetScore.gml</script>
+      <script>scripts\scr_GetTime.gml</script>
     </scripts>
     <scripts name="Tile">
       <script>scripts\scr_ChooseColour.gml</script>
@@ -35,6 +38,9 @@
       <script>scripts\scr_resetBlip.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fntDefault</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Control</object>
     <object>objects\Camera</object>
