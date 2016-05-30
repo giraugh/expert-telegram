@@ -52,9 +52,15 @@
       <object>objects\Cursor</object>
       <object>objects\CursorTrail</object>
     </objects>
+    <objects name="Menu">
+      <object>objects\MenuControl</object>
+      <object>objects\Buttons</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Menu</room>
     <room>rooms\Default</room>
+    <room>rooms\Zen</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
