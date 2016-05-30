@@ -50,6 +50,31 @@ scr_DontAnimate();
             <string>///Init Vars
 text = "";
 lvl = 0;
+size = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Grow older (and bigger)
+size = lerp(size,1,0.25);
 </string>
           </argument>
         </arguments>
@@ -120,7 +145,9 @@ image_index = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw Self
+            <string>///Draw Self with Scaling
+image_xscale = size;
+image_yscale = size;
 draw_self();
 </string>
           </argument>
