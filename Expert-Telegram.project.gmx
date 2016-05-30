@@ -29,6 +29,7 @@
     </scripts>
     <scripts name="Utility">
       <script>scripts\scr_ModifyColour.gml</script>
+      <script>scripts\scr_DontAnimate.gml</script>
     </scripts>
     <scripts name="Camera">
       <script>scripts\scr_CameraBash.gml</script>

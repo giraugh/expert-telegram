@@ -260,10 +260,10 @@ if (!global.zen) {
           <argument>
             <kind>1</kind>
             <string>///Draw score
-var offsetX = 60;
+var offsetX = 15;
 var offsetY = 70;
 
-var xx = tileStartX-offset;
+var xx = tileStartX-offsetX;
 var yy = tileStartY-offsetY - (tileSize/2);
 
 draw_set_font(fntDefault);

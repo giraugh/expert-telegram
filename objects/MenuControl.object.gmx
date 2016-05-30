@@ -26,6 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>///Create Buttons
+
+var PlayButton = instance_create(room_width/2,room_height/2 - 100,Button);
+PlayButton.text = "Normal";
+PlayButton.lvl = 1;
+
+var ZenButton = instance_create(room_width/2,room_height/2 + 100,Button);
+ZenButton.text = "Zen";
+ZenButton.lvl = 2;
 </string>
           </argument>
         </arguments>
