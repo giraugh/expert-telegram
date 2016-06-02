@@ -60,6 +60,8 @@ if (size &lt; 0.03) {
     tile.gridX = gridX;
     tile.gridY = gridY;
     tile.written = true;
+    tile.old = old;
+    with (tile){event_user(0);} //set colour
     instance_destroy();
 }
 </string>

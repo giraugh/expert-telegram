@@ -34,28 +34,7 @@ centerY = y;
 written = false;
 beingSelected = false;
 size = 0.1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Choose Colour
-scr_ChooseColour();
+old = c_white;
 </string>
           </argument>
         </arguments>
@@ -141,17 +120,35 @@ if (!instance_exists(Cursor)){
             <string>//Move Cursor
 if (instance_exists(Cursor)) {
     if (!beingSelected &amp;&amp; Cursor.colour == colour) {
-        if ((abs(Cursor.gridX-gridX) &lt;= 1) &amp;&amp; (abs(Cursor.gridY-gridY) &lt;= 1)){
-            beingSelected = true;
-            Cursor.actualX = x;
-            Cursor.actualY = y;
-            Cursor.gridX = gridX;
-            Cursor.gridY = gridY;
-            scr_CameraBash(8,8);
-            scr_playBlip(scr_getSelectedAmount());
+        if (scr_canBeSelected()){
+            scr_getSelected();
         }
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Choose Colour
+scr_ChooseColour(old);
 </string>
           </argument>
         </arguments>

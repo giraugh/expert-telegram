@@ -96,6 +96,7 @@ for (var i=0;i&lt;tilesWidth;i++) {
         var tile = instance_create(posX,posY,Tile);
         tile.gridX = i+1; //Prevent Zero
         tile.gridY = j+1; //Prevent Zero
+        with (tile) {event_user(0);}
     }
 }
 </string>

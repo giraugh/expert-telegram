@@ -27,6 +27,10 @@
       <script>scripts\scr_UnselectAll.gml</script>
       <script>scripts\scr_Die.gml</script>
       <script>scripts\scr_getSelectedAmount.gml</script>
+      <script>scripts\scr_canBeSelected.gml</script>
+      <script>scripts\scr_getTileVal.gml</script>
+      <script>scripts\scr_getSelected.gml</script>
+      <script>scripts\scr_getTile.gml</script>
     </scripts>
     <scripts name="Utility">
       <script>scripts\scr_ModifyColour.gml</script>
