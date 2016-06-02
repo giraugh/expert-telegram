@@ -21,6 +21,7 @@
       <script>scripts\scr_AwardTime.gml</script>
       <script>scripts\scr_GetScore.gml</script>
       <script>scripts\scr_GetTime.gml</script>
+      <script>scripts\scr_hasGameEnded.gml</script>
     </scripts>
     <scripts name="Tile">
       <script>scripts\scr_ChooseColour.gml</script>
@@ -29,6 +30,7 @@
       <script>scripts\scr_getSelectedAmount.gml</script>
       <script>scripts\scr_canBeSelected.gml</script>
       <script>scripts\scr_getTileVal.gml</script>
+      <script>scripts\scr_getTileSelecting.gml</script>
       <script>scripts\scr_getSelected.gml</script>
       <script>scripts\scr_getTile.gml</script>
     </scripts>

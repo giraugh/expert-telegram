@@ -8,7 +8,7 @@ var yDist = abs(Cursor.gridY-gridY);
 if ((xDist < 2) && (yDist < 2)){return true;}
 
 //Check in straight line horizontally, skipping one
-if (xDist == 2 && yDist == 0 && scr_getTileVal(gridX+xDir,gridY) == colour) {
+if (xDist == 2 && yDist == 0 && scr_getTileVal(gridX+xDir,gridY) == colour && scr_getTileSelecting(gridX+xDir,gridY) == false) {
     show_debug_message("Jump Horizontally From "+string(Cursor.gridX)+","+string(Cursor.gridY));
     show_debug_message("To "+string(Cursor.gridX-xDir)+","+string(Cursor.gridY));
     var to = scr_getTile(Cursor.gridX-xDir,Cursor.gridY);
@@ -19,7 +19,7 @@ if (xDist == 2 && yDist == 0 && scr_getTileVal(gridX+xDir,gridY) == colour) {
 }
 
 //Check in straight line vertically, skipping one
-if (yDist == 2 && xDist == 0 && scr_getTileVal(gridX,gridY+yDir) == colour) {
+if (yDist == 2 && xDist == 0 && scr_getTileVal(gridX,gridY+yDir) == colour && scr_getTileSelecting(gridX,gridY+yDir) == false) {
     show_debug_message("Jump Vertically From "+string(Cursor.gridX)+","+string(Cursor.gridY));
     show_debug_message("To "+string(Cursor.gridX)+","+string(Cursor.gridY-yDir));
     var to = scr_getTile(Cursor.gridX,Cursor.gridY-yDir); 

@@ -49,7 +49,7 @@ randomize();
             <kind>1</kind>
             <string>///Define Vars
 gameSteps = 0; //keep track of step amount
-
+gameLevel = 1;
 tileObj = Tile;
 tilesWidth = 6;
 tilesHeight = 6;
@@ -168,7 +168,7 @@ gameSteps++;
           <argument>
             <kind>1</kind>
             <string>///reduce timer
-timer -= 1/room_speed;
+timer -= (1*max(1,0.8+gameLevel/5))/room_speed;
 if (timer &lt;= 0 &amp;&amp; !global.zen) {
     if (alarm[0] == 0 || alarm[0] == -1) {
         scr_CameraShake(150);
@@ -199,6 +199,31 @@ if (timer &lt;= 0 &amp;&amp; !global.zen) {
             <string>///Calculate Potentials
 potentialScore = scr_GetScore();
 potentialTime = scr_GetTime();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Go up a level?
+if (score &gt;= 500 &amp;&amp; !global.zen) {
+    gameLevel += floor(score / 500);
+    score = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -266,14 +291,21 @@ var offsetY = 70;
 
 var xx = tileStartX-offsetX;
 var yy = tileStartY-offsetY - (tileSize/2);
+var str = "";
 
+//Add Score
 draw_set_font(fntDefault);
 if (potentialScore != 0) {
-    draw_text(xx,yy,string(score) + " + " + string(potentialScore));
+    str = string(score) + " + " + string(potentialScore);
 }
 else {
-    draw_text(xx,yy,string(score));
+    str = string(score);
 }
+
+//Add Level
+if (gameLevel != 1){str += "   x"+string(gameLevel)}
+
+draw_text(xx,yy,str);
 </string>
           </argument>
         </arguments>
