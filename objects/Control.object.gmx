@@ -220,7 +220,7 @@ potentialTime = scr_GetTime();
           <argument>
             <kind>1</kind>
             <string>///Go up a level?
-if (score &gt;= 500 &amp;&amp; !global.zen) {
+if (score &gt;= 500) {
     gameLevel += floor(score / 500);
     score = 0;
 }
