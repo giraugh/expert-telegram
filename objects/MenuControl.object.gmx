@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -34,6 +34,37 @@ PlayButton.lvl = 1;
 var ZenButton = instance_create(room_width/2,room_height/2 + 100,Button);
 ZenButton.text = "Zen";
 ZenButton.lvl = 2;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Show tutorial?
+var forceTutorial = 0;
+
+scr_openMeta();
+    if (ini_read_real("generic","showTutorial",true) == true || forceTutorial) {
+        ini_write_real("generic","showTutorial",false);
+        room_goto(3);
+    }
+ini_close();
 </string>
           </argument>
         </arguments>

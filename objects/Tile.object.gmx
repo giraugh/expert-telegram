@@ -83,8 +83,13 @@ size = lerp(size,1,0.25);
             <kind>1</kind>
             <string>///Create Cursor here
 
-//If one doesnt exist (it shouldn't, so we throw an error if it does)
-if (!instance_exists(Cursor) &amp;&amp; !scr_hasGameEnded()){
+if (instance_exists(Cursor)) {
+    show_debug_message("Error in Tile object:Multiple Cursors");
+    with (Cursor){instance_destroy();}
+}
+
+
+if (!scr_hasGameEnded()){
     var cursor = instance_create(centerX,centerY,Cursor);
     cursor.colour = colour; //Share Colour
     cursor.gridX = gridX;
@@ -92,9 +97,8 @@ if (!instance_exists(Cursor) &amp;&amp; !scr_hasGameEnded()){
     beingSelected = true;
     scr_CameraBash(8,8);
     scr_playBlip(1);
-} else {
-    show_error("Error in Tile object:Multiple Cursors",true);
 }
+
 </string>
           </argument>
         </arguments>

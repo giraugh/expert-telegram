@@ -30,6 +30,7 @@ colour = c_white;
 size = 1;
 gridX = 0;
 gridY = 0;
+perm = false;
 </string>
           </argument>
         </arguments>
@@ -56,12 +57,14 @@ gridY = 0;
 
 size = lerp(size,0,0.25);
 if (size &lt; 0.03) {
-    var tile = instance_create(x,y,Tile);
-    tile.gridX = gridX;
-    tile.gridY = gridY;
-    tile.written = true;
-    tile.old = old;
-    with (tile){event_user(0);} //set colour
+    if (!perm) {
+        var tile = instance_create(x,y,Tile);
+        tile.gridX = gridX;
+        tile.gridY = gridY;
+        tile.written = true;
+        tile.old = old;
+        with (tile){event_user(0);} //set colour
+    }
     instance_destroy();
 }
 </string>
