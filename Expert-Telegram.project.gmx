@@ -15,6 +15,7 @@
     <sprite>sprites\sButton</sprite>
     <sprite>sprites\sBack</sprite>
     <sprite>sprites\sLeaderBoard</sprite>
+    <sprite>sprites\sprite5</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -53,6 +54,8 @@
     </scripts>
     <scripts name="IO">
       <script>scripts\scr_openMeta.gml</script>
+      <script>scripts\scr_getMeta.gml</script>
+      <script>scripts\scr_setMeta.gml</script>
     </scripts>
     <scripts name="Tutorial">
       <script>scripts\scr_incTutorialConnections.gml</script>
@@ -82,6 +85,10 @@
     <objects name="Tutorial">
       <object>objects\TutorialControl</object>
     </objects>
+    <objects name="Score">
+      <object>objects\ScoreControl</object>
+      <object>objects\ContinueButton</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Menu</room>
@@ -90,6 +97,7 @@
     <rooms name="Tutorial">
       <room>rooms\Tutorial</room>
     </rooms>
+    <room>rooms\Score</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
